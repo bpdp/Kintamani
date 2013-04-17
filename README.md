@@ -26,7 +26,7 @@ _(Nothing yet)_
 License
 -------
 ~~~
-Copyright 2012, Bambang Purnomosidi D. P.
+Copyright 2013, Bambang Purnomosidi D. P.
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -43,7 +43,7 @@ Copyright 2012, Bambang Purnomosidi D. P.
 
 Author
 ------
-The author ([Bambang Purnomosidi D. P.](http://bpdp.name)) is a Ph.D student in [Electrical Engineering and Information Technology](http://pasca.te.ugm.ac.id), [Faculty of Engineering](http://www.fakultas-teknik.ugm.ac.id), [Gadjah Mada University](http://www.ugm.ac.id). He can be contacted by:
+The author ([Bambang Purnomosidi D. P.](http://bpdp.name)) is Ph.D candidate in [Electrical Engineering and Information Technology](http://pasca.te.ugm.ac.id), [Faculty of Engineering](http://www.fakultas-teknik.ugm.ac.id), [Gadjah Mada University](http://www.ugm.ac.id). He can be contacted by:
 * Email: bambangpdp-with-domain-name-yahoocom-or-gmailcom
 * Facebook: [/bambangpdp](http://www.facebook.com/bambangpdp)
 * Twitter: [@bpdp](http://twitter.com/bpdp)
