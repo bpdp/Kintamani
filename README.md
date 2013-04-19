@@ -3,26 +3,6 @@ Kintamani
 
 Welcome to Kintamani project. This project is meant to create a Pragmatic Web framework. It is the result of author's dissertation. As the dissertation is still in progress, in the meantime this framework is **very much unstable** and there's no documentation. This will surely be completed as time goes by.
 
-Getting Started
----------------
-_(Coming - not so - soon)_
-
-Documentation
--------------
-_(Coming - not so - soon)_
-
-Examples
---------
-_(Coming - not so - soon)_
-
-Contributing
-------------
-_(Nothing yet)_
-
-Release History
----------------
-_(Nothing yet)_
-
 License
 -------
 ~~~
