@@ -11,7 +11,8 @@ This is just an initial attempt to integrate [Prova](http://prova.ws) into Vert.
 * get all jars (Prova and Vert.x). I've prepare everything in ``mods/name.bpdp~kintamani~0.0.1/build.gradle``, so cd into that dir and then: 
 	* gradle compileJava
 	* gradle copyToLib => needs only to be executed once, to copy all jar into lib (needed to run module)
-* cd to original dir (parent of mods)
+	* ./del-vertx-lib.sh => del vertx lib which is copied to lib from previous step. secure. no effect for vertx install dir
+* cd to original dir (aparent of mods)
 * vertx runmod name.bpdp~kintamani~0.0.1
 * access ``http://localhost:8080/rulesinaction``	
 
