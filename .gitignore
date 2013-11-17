@@ -1,0 +1,17 @@
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+
+pids
+logs
+results
+
+mods/name.bpdp~kintamani~0.0.1/name
+mods/name.bpdp~kintamani~0.0.1/build
+mods/name.bpdp~kintamani~0.0.1/lib/*
+mods/name.bpdp~kintamani~0.0.1/.gradle

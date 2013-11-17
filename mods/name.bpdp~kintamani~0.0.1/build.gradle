@@ -1,0 +1,66 @@
+apply plugin: 'java'
+apply plugin: 'project-report'
+ 
+version = "0.0.1"
+group = "name.bpdp.kintamani"
+ 
+sourceSets {
+	main { java {srcDir 'src' } }
+	// if you want to change 'build' into whatever dir => see also task buildAll
+	// 		which will copy result of the compilation process in build/classes/main
+	//		make sure to change that to if you want to change this part. 
+	//main { java {buildDir '.' } }
+}
+
+dependencies {
+
+	// for unmanage lib/jar:
+	// all jar inside lib dir => prova, etc
+	//compile files(fileTree(dir: 'lib', includes: ['*.jar']))
+	// all jar of vert.x => change to wherever you install vert.x: $VERTX_HOME/lib
+	// mine is '/home/bpdp/software/vert.x/'
+	//compile files(fileTree(dir: '/home/bpdp/software/vert.x/lib', includes: ['*.jar']))
+
+	// it's for managed dependency
+	// make sre to do 'gradle copyToLib'
+	
+  compile group: 'ws.prova', name: 'ws.prova.compact', version: '3.2.1'
+  compile group: 'io.vertx', name: 'vertx-core', version: '2.0.2-final'
+  compile group: 'io.vertx', name: 'vertx-platform', version: '2.0.2-final'
+ 
+  testCompile group: 'junit', name: 'junit', version: '4.11'
+
+}
+ 
+repositories {
+  mavenCentral()
+	// maven repo for Prova
+	maven { url "https://prova.ws/maven2" }
+	// maven repo for Prova dependencies com.springsource.*
+	maven { url "http://repository.springsource.com/maven/bundles/release" }
+	maven { url "http://repository.springsource.com/maven/bundles/external" }
+	// maven repo for Prova dependencies: openrdf-sesame-onejar-osgi
+	maven { url "https://repository.jboss.org/nexus/content/repositories/thirdparty-releases" }	
+}
+ 
+test {
+  maxParallelForks = 5
+  maxHeapSize = '1024m'
+}
+
+// copy all needed jar after gradle compileJava
+// remember to do this - only once 
+// *.jar for compilation process will be copied to lib/
+// 		->	useful for "vertx runmod name.bpdp~kintamani~0.0.1"
+//				from under mods dir
+//
+task copyToLib(type: Copy) {
+  into "lib"
+  from configurations.runtime
+}
+
+// compile everything then copy the result to current dir
+task buildAll(dependsOn: 'classes', type: Copy) {
+	into "."
+	from "build/classes/main"
+}

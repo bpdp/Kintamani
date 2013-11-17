@@ -3,6 +3,22 @@ Kintamani
 
 Welcome to Kintamani project. This project is meant to create a Pragmatic Web framework. It is the result of author's dissertation. As the dissertation is still in progress, in the meantime this framework is **very much unstable** and there's no documentation. This will surely be completed as time goes by.
 
+The Software
+============
+
+The software is in ``mods`` directory. It is developed as [Vert.x](http://vertx.io) module. In the meantime, it is now ``Runnable`` and can be executed using there steps:
+
+~~~
+* get all jars (Prova and Vert.x). I've prepare everything in ``mods/name.bpdp~kintamani~0.0.1/build.gradle``, so cd into that dir and then: 
+	* gradle compileJava
+	* gradle copyToLib => needs only to be executed once, to copy all jar into lib (needed to run module)
+* cd to original dir (parent of mods)
+* vertx runmod name.bpdp~kintamani~0.0.1
+* access ``http://localhost:8080/rulesinaction``	
+~~~
+
+This is just an initial attempt to integrate [Prova](http://prova.ws) into Vert.x.
+
 License
 -------
 ~~~
