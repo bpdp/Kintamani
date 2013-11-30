@@ -22,7 +22,7 @@ dependencies {
 	//compile files(fileTree(dir: '/home/bpdp/software/vert.x/lib', includes: ['*.jar']))
 
 	// it's for managed dependency
-	// make sre to do 'gradle copyToLib'
+	// make sure to do 'gradle copyToLib'
 	
   compile group: 'ws.prova', name: 'ws.prova.compact', version: '3.2.1'
   compile group: 'io.vertx', name: 'vertx-core', version: '2.0.2-final'
@@ -57,6 +57,21 @@ test {
 task copyToLib(type: Copy) {
   into "lib"
   from configurations.runtime
+}
+
+task deleteVertxLib(type: Delete) {
+
+	FileCollection vertxlib = files(
+		['lib/hazelcast-2.6.jar',
+		'lib/jackson-annotations-2.2.2.jar',
+		'lib/jackson-core-2.2.2.jar',
+		'lib/jackson-databind-2.2.2.jar',
+		'lib/netty-all-4.0.10.Final.jar',
+		'lib/vertx-core-2.0.2-final.jar',
+		'lib/vertx-platform-2.0.2-final.jar'])
+
+	delete(vertxlib)
+
 }
 
 // compile everything then copy the result to current dir
