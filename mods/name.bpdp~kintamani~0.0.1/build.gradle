@@ -25,6 +25,7 @@ dependencies {
 	// make sure to do 'gradle copyToLib'
 	
   compile group: 'ws.prova', name: 'ws.prova.compact', version: '3.2.1'
+  compile group: 'org.thymeleaf', name: 'thymeleaf', version: '2.1.1.RELEASE'
   compile group: 'io.vertx', name: 'vertx-core', version: '2.0.2-final'
   compile group: 'io.vertx', name: 'vertx-platform', version: '2.0.2-final'
  
