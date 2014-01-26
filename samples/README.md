@@ -2,11 +2,8 @@ Kintamani Samples
 =================
 
 To run:
-
-~~~
 *	make sure, Kintamani has been build and installed in local Maven repo by executing `gradle`, then `gradle install` in root directory of Kintamani (i.e. parent of this dir).
 *	from this dir, execute `vertx runmod name.bpdp~kintamani-demo~1.0`
-~~~
 
 License
 -------
