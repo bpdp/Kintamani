@@ -41,7 +41,7 @@ dependencies {
   */
 
   compile group: 'ws.prova', name: 'ws.prova.compact', version: '3.2.1'
-  compile group: 'org.thymeleaf', name: 'thymeleaf', version: '2.1.1.RELEASE'
+  compile group: 'org.thymeleaf', name: 'thymeleaf', version: '2.1.2.RELEASE'
  
   // If you're creating Groovy compiled verticles you may need the following dependencies
   //provided "org.codehaus.groovy:groovy-all:$groovyVersion"
