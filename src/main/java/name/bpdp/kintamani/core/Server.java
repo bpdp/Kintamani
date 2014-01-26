@@ -11,43 +11,30 @@ import org.vertx.java.core.http.*;
 import ws.prova.api2.*;
 import ws.prova.exchange.*;
 
-public class Server extends Verticle {
+public class Server {
 
-	public void start() {
-
-		HttpServer server = vertx.createHttpServer();
-
-		RouteMatcher routeMatcher = new RouteMatcher();
+	public String Server() {
 
 		String kAgent = "prova";
 		String kPort = null;
  
 		String rulebase = "rules/test017.prova";
-		int[] numSolutions = new int[] {2};
+		//int[] numSolutions = new int[] {2};
 
 		ProvaCommunicator prova = new ProvaCommunicatorImpl(kAgent,kPort,rulebase,ProvaCommunicatorImpl.SYNC);
 		final List<ProvaSolution[]> solutions = prova.getInitializationSolutions();
 
-		routeMatcher.get("/rulesinaction", new Handler<HttpServerRequest>() {
-			public void handle(HttpServerRequest req) {
-    		//req.response().end("hasyu");
-    		//req.response().end(solutions);
-    		//req.response().end(solutions.get(0).length);
-				String gembrik = "";
-				for (ProvaSolution[] resultSet : solutions) {
-					for (ProvaSolution provaSolution : resultSet) {
-						for (Object entry : provaSolution.getNv().entrySet()) {
-							gembrik += entry;
-						}
-					}
+		String ruleResults = "";
+		for (ProvaSolution[] resultSet : solutions) {
+			for (ProvaSolution provaSolution : resultSet) {
+				for (Object entry : provaSolution.getNv().entrySet()) {
+					ruleResults += entry;
 				}
-				req.response().end(gembrik);
-	    }
-		});
+			}
+		}
 
-		server.requestHandler(routeMatcher).listen(8080, "localhost");
+		return ruleResults;
 
 	}
 
-};
-
+}

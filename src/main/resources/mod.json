@@ -1,7 +1,7 @@
 {
 
   // Java verticle
-  "main":"name.bpdp.kintamani.core.Server",
+  //"main":"name.bpdp.kintamani.core.Server",
 
   // In this example we also provide various other versions of the main verticle, you can uncomment this and
   // play around:
