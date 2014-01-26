@@ -19,7 +19,9 @@ public class Prova extends Verticle {
 
 		RouteMatcher routeMatcher = new RouteMatcher();
 
-		String provaResults = new Server();
+		Server prv = new Server();
+
+		final String provaResults = prv.getResults();
 
 		routeMatcher.get("/rulesinaction", new Handler<HttpServerRequest>() {
 			public void handle(HttpServerRequest req) {

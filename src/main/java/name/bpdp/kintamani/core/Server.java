@@ -13,7 +13,7 @@ import ws.prova.exchange.*;
 
 public class Server {
 
-	public String Server() {
+	public String getResults() {
 
 		String kAgent = "prova";
 		String kPort = null;
