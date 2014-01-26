@@ -8,6 +8,14 @@ The Software
 
 This is just an initial attempt to integrate [Prova](http://prova.ws) into Vert.x. It is developed as [Vert.x](http://vertx.io) module.
 
+Build
+-----
+
+This project uses [Gradle](http://www.gradle.org). All of files needed by Gradle reside in `build.gradle` and `gradle` directory. To build into a ready to use non-runnable Vert.x module, just do these steps:
+*	gradle
+* gradle install
+If you build for the first time, chances are, the first step will result an error. If that's the case, just repeat `gradle`. It will pool all of the results in `build` directory. The second step is used to install Vert.x module into local Maven repo (~/.m2/repository). If you succeed in doing these steps, have a look at `samples` directory for module usage.
+
 License
 -------
 ~~~
@@ -27,7 +35,8 @@ Copyright 2013, Bambang Purnomosidi D. P.
 ~~~
 
 Author
-------
+======
+
 The author ([Bambang Purnomosidi D. P.](http://bpdp.name)) is Ph.D candidate in [Electrical Engineering and Information Technology](http://pasca.te.ugm.ac.id), [Faculty of Engineering](http://www.fakultas-teknik.ugm.ac.id), [Gadjah Mada University](http://www.ugm.ac.id). He can be contacted by:
 * Email: bambangpdp-with-domain-name-yahoocom-or-gmailcom
 * Facebook: [/bambangpdp](http://www.facebook.com/bambangpdp)
