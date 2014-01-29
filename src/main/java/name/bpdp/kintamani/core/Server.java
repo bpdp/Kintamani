@@ -13,12 +13,13 @@ import ws.prova.exchange.*;
 
 public class Server {
 
-	public String getResults() {
+	public String getResults(String ruleSourceFile) {
 
 		String kAgent = "prova";
 		String kPort = null;
  
-		String rulebase = "rules/test017.prova";
+		String rulebase = ruleSourceFile;
+		//String rulebase = "rules/test017.prova";
 		//int[] numSolutions = new int[] {2};
 
 		ProvaCommunicator prova = new ProvaCommunicatorImpl(kAgent,kPort,rulebase,ProvaCommunicatorImpl.SYNC);
