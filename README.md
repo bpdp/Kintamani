@@ -1,27 +1,20 @@
-Kintamani
-=========
+# Kintamani
 
-Welcome to Kintamani project. This project is meant to create a Pragmatic Web framework. It is the result of author's dissertation. As the dissertation is still in progress, in the meantime this framework is **very much unstable** and there's no documentation. This will surely be completed as time goes by.
+![Kintamani logo](assets/images/kintamani-logo-shadow.jpg)
 
-The Software
-============
+# Development tools
 
-This is just an initial attempt to integrate [Prova](http://prova.ws) into Vert.x. It is developed as [Vert.x](http://vertx.io) module.
+* [Scala](http://www.scala-lang.org) 2.11.4
+* [sbt](http://www.scala-sbt.org) 0.13.7
 
-Build
------
+## Build
 
-This project uses [Gradle](http://www.gradle.org). All of files needed by Gradle reside in `build.gradle` and `gradle` directory. To build into a ready to use non-runnable Vert.x module, just do these steps:
+TBW
 
-*	gradle
-* gradle install
+## License
 
-If you build for the first time, chances are, the first step will result an error. If that's the case, just repeat `gradle`. It will pool all of the results in `build` directory. The second step is used to install Vert.x module into local Maven repo (~/.m2/repository). If you succeed in doing these steps, have a look at `samples` directory for module usage.
-
-License
--------
 ~~~
-Copyright 2013, Bambang Purnomosidi D. P.
+Copyright 2015, Bambang Purnomosidi D. P.
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -36,8 +29,7 @@ Copyright 2013, Bambang Purnomosidi D. P.
    limitations under the License.
 ~~~
 
-Author
-======
+# Author
 
 The author ([Bambang Purnomosidi D. P.](http://bpdp.name)) is Ph.D candidate in [Electrical Engineering and Information Technology](http://pasca.te.ugm.ac.id), [Faculty of Engineering](http://www.fakultas-teknik.ugm.ac.id), [Gadjah Mada University](http://www.ugm.ac.id). He can be contacted by:
 * Email: bambangpdp-with-domain-name-yahoocom-or-gmailcom

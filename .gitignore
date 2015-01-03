@@ -1,22 +1,20 @@
-.DS_Store
-.gradle
-.idea
-.classpath
-.project
-.settings
-.yardoc
-.yardopts
-bin
-build
-target
-out
-*.iml
-*.ipr
-*.iws
-test-output
-Scratch.java
-ScratchTest.java
-test-results
-test-tmp
+# Created by https://www.gitignore.io
+
+### Scala ###
 *.class
-/Kintamani/.nb-gradle/private/
+*.log
+
+# sbt specific
+.cache
+.history
+.lib/
+dist/*
+target/
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
+
+# Scala-IDE specific
+.scala_dependencies
+.worksheet
